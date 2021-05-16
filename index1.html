@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+   * {
+      box-sizing: border-box;
+   }
+  
+   .backgroundVideo {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+	  top:0%;
+      min-width: 100%;
+      min-height: 100%;
+	  overflow:hidden !important;
+	  
+   }
+   .content {
+      position: fixed;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      color: #f1f1f1;
+      width: 100%;
+      padding: 20px;
+   }
+   .playPauseBtn {
+      width: 200px;
+      font-size: 18px;
+      padding: 10px;
+      border: none;
+      background: rgb(72, 22, 167);
+      color: #fff;
+      cursor: pointer;
+      opacity: 0.8;
+   }
+   .playPauseBtn:hover {
+      opacity: 1;
+   }
+</style>
+</head>
+
+<body>
+
+<div class="fullscreen-bg">
+<video autoplay muted loop class="backgroundVideo">
+        <source src="videos/Taj Group.mp4" type="video/mp4">
+        
+    </video>
+	
+</div>
+<a href="http://tajoddingroup.com/home.php" class="bttn" style="border: 1px solid #f6c5b8;
+    color: #FFFFFF;
+    background: #ad6958;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+	left:0;
+    margin: 0 auto;text-align:center;"><span>Enter the site</span></a>
+<script>
+   document .querySelector(".playPauseBtn") .addEventListener("click", toggleVideo);
+   var video = document.querySelector(".backgroundVideo");
+   var btn = document.querySelector(".playPauseBtn");
+   function toggleVideo() {
+      if (video.paused) {
+         video.play();
+         btn.innerHTML = "Pause";
+      }
+      else {
+         video.pause();
+         btn.innerHTML = "Play";
+      }
+   }
+</script>
+<!-- CSS -->
+
+</body>
+
+</html>
